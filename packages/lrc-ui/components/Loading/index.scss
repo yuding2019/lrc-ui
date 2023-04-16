@@ -1,0 +1,59 @@
+@import "../../styles/variable.scss";
+
+$loading: #{$classNamePrefix}-loading;
+$loadingTrack: #{$loading}-track;
+
+$loadingSM: $fontSize2;
+$loadingMD: $fontSize3;
+$loadingLG: $fontSize4;
+
+.#{$loading} {
+  display: inline-flex;
+  align-items: center;
+}
+
+.#{$loadingTrack} {
+  display: inline-block;
+  border-radius: $brCircle;
+  box-sizing: border-box;
+  position: relative;
+
+  &__sm {
+    width: $loadingSM;
+    height: $loadingSM;
+  }
+
+  &__md {
+    width: $loadingMD;
+    height: $loadingMD;
+  }
+
+  &__lg {
+    width: $loadingLG;
+    height: $loadingLG;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    box-sizing: border-box; 
+    border-top: 1px solid currentColor;
+    border-left: 1px solid currentColor;
+    border-top-left-radius: $brCircle;
+    animation: loading infinite 1s linear;
+    transform-origin: 100% 100%;
+  }
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,177 @@
+# Button
+
+就是按钮，没啥好说的。
+
+## 按钮类型
+
+分为`primary` `default` `text` `link`四类按钮。
+
+> 可在`primary`上添加`outline`属性，以支持轻量的线框按钮。
+
+```tsx
+<>
+  <style>{`
+    div.demo {
+      display: flex;
+      gap: 16px;
+    }
+  `}</style>
+
+  <div className="demo">
+    <Button type="primary">Primary Button</Button>
+    <Button>Default Button</Button>
+    <Button type="text">Text Button</Button>
+    <Button type="link">Link Button</Button>
+    <Button type="primary" outline>
+      Primary Outline Button
+    </Button>
+  </div>
+</>
+```
+
+## 按钮大小
+
+支持`sm` `md` `lg`三种尺寸。
+
+```tsx
+<>
+  <style>{`
+    div.demo {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+  `}</style>
+
+  <div className="demo">
+    <Button type="primary" size="sm">
+      SM Button
+    </Button>
+    <Button type="primary">MD Button</Button>
+    <Button type="primary" size="lg">
+      LG Button
+    </Button>
+  </div>
+  <br />
+  <div className="demo">
+    <Button type="primary" size="sm" round outline>
+      SM Button
+    </Button>
+    <Button type="primary" round outline>
+      MD Button
+    </Button>
+    <Button type="primary" size="lg" round outline>
+      LG Button
+    </Button>
+  </div>
+</>
+```
+
+## 危险操作
+
+用于警告，提示危险操作。
+
+```tsx
+<>
+  <style>{`
+    div.demo {
+      display: flex;
+      gap: 16px;
+    }
+  `}</style>
+
+  <div className="demo">
+    <Button danger>Danger Button</Button>
+    <Button danger outline>
+      Danger Outline Button
+    </Button>
+    <Button type="text" danger>
+      Danger Text Button
+    </Button>
+    <Button type="link" danger>
+      Danger Link Button
+    </Button>
+  </div>
+</>
+```
+
+## Link Button
+
+不是单纯的`link`类型的 button，当传递了`href`属性，会使用`<a />`进行渲染按钮。
+
+```tsx
+<>
+  <style>{`
+    div.demo {
+      display: flex;
+      gap: 16px;
+    }
+  `}</style>
+
+  <div className="demo">
+    <Button href="/">
+      点击会返回主页
+    </Button>
+  </div>
+</>
+```
+
+## 按钮状态
+
+支持禁用和加载状态。
+
+```tsx
+<>
+  <style>{`
+    div.demo {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+  `}</style>
+
+  <div className="demo">
+    <Button type="primary" disabled>
+      Primary Button
+    </Button>
+    <Button disabled>Default Button</Button>
+    <Button type="text" disabled>
+      Text Button
+    </Button>
+    <Button type="primary" outline disabled>
+      Primary Outline Button
+    </Button>
+    <Button danger disabled>
+      Danger Button
+    </Button>
+    <Button danger disabled outline>
+      Danger Button
+    </Button>
+    <Button type="link" href="/" disabled>
+      Href Button
+    </Button>
+  </div>
+  <br />
+  <div className="demo">
+    <Button type="primary" loading>
+      Primary Button
+    </Button>
+    <Button loading>Default Button</Button>
+    <Button type="text" loading>
+      Text Button
+    </Button>
+    <Button type="primary" outline loading>
+      Primary Outline Button
+    </Button>
+    <Button danger loading>
+      Danger Button
+    </Button>
+    <Button danger loading outline>
+      Danger Button
+    </Button>
+    <Button type="link" href="/" loading>
+      Href Button
+    </Button>
+  </div>
+</>
+```

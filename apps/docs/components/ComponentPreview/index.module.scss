@@ -1,0 +1,59 @@
+@import '~lrc-ui/styles/common.scss';
+
+.wrapper {
+  width: 100%;
+  border: 1px solid #e7e7e7;
+  box-sizing: border-box;
+  box-shadow: 0 2px 10px 2px #e7e7e7;
+  border-radius: 16px;
+  overflow: hidden;
+  font-family: $fontFamily;
+  margin-top: 8px;
+  margin-bottom: 32px;
+  
+  & pre {
+    font-family: $fontFamily;
+  }
+}
+
+.preview {
+  position: relative;
+  padding: 16px;
+  white-space: pre;
+}
+
+.toolbar {
+  width: 100%;
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px dashed #eee;
+}
+
+.codeBtn {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover {
+    color: $blue5;
+  }
+  
+  &.active {
+    color: $blue5;
+  }
+}
+
+.editor {
+  font-family: 'JetBrainsMono';
+  font-size: 13px;
+  font-variant-ligatures: common-ligatures;
+  padding: 6px;
+  background-color: #fafafa;
+  display: none;
+
+  &.open {
+    display: block;
+  }
+}

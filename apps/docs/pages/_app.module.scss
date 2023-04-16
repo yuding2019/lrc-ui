@@ -1,0 +1,43 @@
+@import '~lrc-ui/styles/variable.scss';
+
+@font-face {
+  font-family: JetBrainsMono;
+  src: url("../public/font/JetBrainsMono-Regular.woff2");
+}
+
+.emptyLoadFont {
+  font-family: "JetBrainsMono";
+  position: absolute;
+  display: none;
+  width: 0;
+  height: 0;
+  user-select: none;
+  pointer-events: none;
+  top: -999px;
+  left: -999px;
+}
+
+.wrapper {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  font-family: $fontFamily;
+}
+
+.divider {
+  width: 0;
+  height: 100%;
+  border-left: 1px dashed $gray2;
+}
+
+.contentWrap {
+  flex: 1;
+  height: 100%;
+  overflow: auto;
+  padding: 16px;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+}

@@ -1,0 +1,34 @@
+@import '../../styles/common.scss';
+
+$text: #{$classNamePrefix}-text;
+
+.#{$text} {
+  @include reset;
+  font-family: $fontFamily;
+  font-weight: $fontWeightMedium;
+  filter: unset;
+
+  &__xs {
+    @include normalFontXS;
+  }
+
+  &__sm {
+    @include normalFontSM;
+  }
+
+  &__md {
+    @include normalFontMD;
+  }
+
+  &__lg {
+    @include normalFontLG;
+  }
+
+  &__bold {
+    font-weight: $fontWeightSemibold;
+  }
+
+  &__inline {
+    display: inline-block;
+  }
+}

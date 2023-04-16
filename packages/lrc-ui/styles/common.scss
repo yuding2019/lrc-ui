@@ -1,0 +1,79 @@
+@import './variable.scss';
+
+@mixin reset {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@mixin resetList {
+  @include reset;
+  list-style: none;
+}
+
+@mixin textEllipsis {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin normalFontXS {
+  font-size: $fontSize1;
+  line-height: $lineHeight1;
+  font-weight: $fontWeightRegular;
+}
+
+@mixin normalFontSM {
+  font-size: $fontSize2;
+  line-height: $lineHeight2;
+  font-weight: $fontWeightMedium;
+}
+
+@mixin normalFontMD {
+  font-size: $fontSize3;
+  line-height: $lineHeight3;
+  font-weight: $fontWeightMedium;
+}
+
+@mixin normalFontLG {
+  font-size: $fontSize4;
+  line-height: $lineHeight4;
+  font-weight: $fontWeightMedium;
+}
+
+@mixin heading1 {
+  font-size: $fontSize10;
+  line-height: $lineHeight10;
+  font-weight: $fontWeightMedium;
+}
+
+@mixin heading2 {
+  font-size: $fontSize9;
+  line-height: $lineHeight9;
+  font-weight: $fontWeightMedium;
+}
+
+@mixin heading3 {
+  font-size: $fontSize8;
+  line-height: $lineHeight8;
+  font-weight: $fontWeightMedium;
+}
+
+@mixin heading4 {
+  font-size: $fontSize7;
+  line-height: $lineHeight7;
+  font-weight: $fontWeightMedium;
+}
+
+@mixin heading5 {
+  font-size: $fontSize6;
+  line-height: $lineHeight6;
+  font-weight: $fontWeightMedium;
+}
+
+@mixin heading6 {
+  font-size: $fontSize5;
+  line-height: $lineHeight5;
+  font-weight: $fontWeightMedium;
+}

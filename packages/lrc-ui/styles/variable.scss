@@ -1,0 +1,82 @@
+$fontFamily: 'Segoe UI', 'Segoe UI Web (West European)', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Bahnschrift, sans-serif;
+
+$classNamePrefix: 'lrc';
+
+$fontWeightRegular: 400;
+$fontWeightMedium: 500;
+$fontWeightSemibold: 600;
+$fontWeightBold: 700;
+
+$fontSize1: 10px;
+$fontSize2: 12px;
+$fontSize3: 14px;
+$fontSize4: 16px;
+$fontSize5: 18px;
+$fontSize6: 20px;
+$fontSize7: 22px;
+$fontSize8: 24px;
+$fontSize9: 26px;
+$fontSize10: 28px;
+
+$lineHeight1: 14px;
+$lineHeight2: 16px;
+$lineHeight3: 20px;
+$lineHeight4: 22px;
+$lineHeight5: 24px;
+$lineHeight6: 28px;
+$lineHeight7: 30px;
+$lineHeight8: 32px;
+$lineHeight9: 34px;
+$lineHeight10: 36px;
+
+$brNone: 0px;
+$brSM: 4px;
+$brMD: 8px;
+$brLG: 12px;
+$brXL: 16px;
+$brCircle: 1000px;
+
+$spacing02: 2px;
+$spacing04: 4px;
+$spacing06: 6px;
+$spacing08: 8px;
+$spacing12: 12px;
+$spacing16: 16px;
+$spacing24: 24px;
+$spacing32: 32px;
+
+$bluePrimary: #0d6efd;
+$blue1: lighten($bluePrimary, 40%);
+$blue2: lighten($bluePrimary, 30%);
+$blue3: lighten($bluePrimary, 20%);
+$blue4: lighten($bluePrimary, 10%);
+$blue5: $bluePrimary;
+$blue6: darken($bluePrimary, 10%);
+$blue7: darken($bluePrimary, 20%);
+$blue8: darken($bluePrimary, 30%);
+$blue9: darken($bluePrimary, 40%);
+
+$redPrimary: #dc3545;
+$red1: lighten($redPrimary, 40%);
+$red2: lighten($redPrimary, 30%);
+$red3: lighten($redPrimary, 20%);
+$red4: lighten($redPrimary, 10%);
+$red5: $redPrimary;
+$red6: darken($redPrimary, 10%);
+$red7: darken($redPrimary, 20%);
+$red8: darken($redPrimary, 30%);
+$red9: darken($redPrimary, 40%);
+
+$grayPrimary: #92969b;
+$gray1: lighten($grayPrimary, 40%);
+$gray2: lighten($grayPrimary, 30%);
+$gray3: lighten($grayPrimary, 20%);
+$gray4: lighten($grayPrimary, 10%);
+$gray5: $grayPrimary;
+$gray6: darken($grayPrimary, 10%);
+$gray7: darken($grayPrimary, 20%);
+$gray8: darken($grayPrimary, 30%);
+$gray9: darken($grayPrimary, 40%);
+
+$white: #fff;
+$black: #000;

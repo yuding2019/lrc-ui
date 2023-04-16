@@ -1,0 +1,36 @@
+@import '../../styles/common.scss';
+
+$heading: #{$classNamePrefix}-heading;
+
+.#{$heading} {
+  @include reset;
+  font-family: $fontFamily;
+
+  &__1 {
+    @include heading1;
+  }
+
+  &__2 {
+    @include heading2;
+  }
+
+  &__3 {
+    @include heading3;
+  }
+
+  &__4 {
+    @include heading4;
+  }
+
+  &__5 {
+    @include heading5;
+  }
+
+  &__6 {
+    @include heading6;
+  }
+
+  &__bold {
+    font-weight: $fontWeightBold;
+  }
+}

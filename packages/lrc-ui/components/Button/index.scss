@@ -1,0 +1,151 @@
+@import "../../styles/common.scss";
+
+$btn: #{$classNamePrefix}-btn;
+
+@mixin dangerBtn($className) {
+  color: $white;
+  border-color: $red5;
+  background-color: $red5;
+
+  &:not(.#{$btn}--disabled):hover {
+    border-color: $red4;
+    background-color: $red4;
+  }
+
+  &.#{$className}-outline {
+    color: $red5;
+    border-color: $red5;
+    background-color: $white;
+
+    &:not(.#{$btn}--disabled):hover {
+      color: $white;
+      border-color: $red5;
+      background-color: $red5;
+    }
+  }
+}
+
+.#{$btn} {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  border: 1px solid rgba($white, 0);
+  border-radius: $brMD;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  text-decoration: none;
+
+  &--sm {
+    padding: $spacing04 $spacing08;
+  }
+
+  &--md {
+    padding: $spacing06 $spacing12;
+  }
+
+  &--lg {
+    padding: $spacing08 $spacing16;
+  }
+
+  &--round {
+    border-radius: $brCircle;
+  }
+
+  &:not(.#{$btn}--disabled):active {
+    filter: brightness(0.9);
+  }
+}
+
+.#{$btn}--primary {
+  color: $white;
+  border-color: $blue5;
+  background-color: $blue5;
+
+  &:not(.#{$btn}--disabled):hover {
+    border-color: $blue4;
+    background-color: $blue4;
+  }
+
+  &-outline {
+    color: $blue5;
+    border-color: $blue5;
+    background-color: $white;
+
+    &:not(.#{$btn}--disabled):hover {
+      color: $white;
+      border-color: $blue5;
+      background-color: $blue5;
+    }
+  }
+
+  &-danger {
+    @include dangerBtn(#{$btn}--primary);
+  }
+}
+
+.#{$btn}--default {
+  color: $gray9;
+  border-color: $gray2;
+  background-color: $white;
+
+  &:not(.#{$btn}--disabled):hover {
+    border-color: $gray5;
+    background-color: $gray1;
+  }
+
+  &-danger {
+    @include dangerBtn(#{$btn}--default);
+  }
+}
+
+.#{$btn}--text {
+  color: $gray9;
+  background-color: $white;
+
+  &:not(.#{$btn}--disabled):hover {
+    border-color: $gray2;
+    background-color: $gray2;
+  }
+
+  &-danger {
+    color: $red5;
+
+    &:not(.#{$btn}--disabled):hover {
+      color: $red4;
+      border-color: $gray1;
+      background-color: $gray1;
+    }
+  }
+}
+
+.#{$btn}--link {
+  color: $blue5;
+  border-color: $white;
+  background-color: $white;
+
+  &:not(.#{$btn}--disabled):hover {
+    color: $blue4;
+    background-color: $gray1;
+  }
+
+  &-danger {
+    color: $red5;
+
+    &:not(.#{$btn}--disabled):hover {
+      color: $red4;
+      border-color: $gray1;
+      background-color: $gray1;
+    }
+  }
+}
+
+.#{$btn}--disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.#{$btn}__loading {
+  margin-right: $spacing06;
+}

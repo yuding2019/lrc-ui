@@ -1,0 +1,41 @@
+@import '~lrc-ui/styles/variable.scss';
+
+.wrapper {
+  width: 320px;
+  height: 100%;
+  padding: $spacing16;
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  display: inline-block;
+  width: 100%;
+  font-size: $fontSize4;
+  padding: $spacing08 $spacing12;
+  font-weight: $fontWeightMedium;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  border-radius: $brLG;
+  margin-bottom: $spacing04;
+
+  &:hover {
+    color: $blue5;
+    background-color: $blue1;
+  }
+
+  &.active {
+    color: $blue5;
+    background-color: $blue1;
+  }
+}
+
+.group {
+  margin-top: $spacing04;
+}
+
+.groupName {
+  color: $gray5;
+  margin-bottom: $spacing06;
+}
