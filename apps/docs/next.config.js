@@ -14,6 +14,7 @@ const nextConfig = {
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
   reactStrictMode: true,
   transpilePackages: ["ui"],
+  output: 'export',
 };
 
 module.exports = withMDX(nextConfig);

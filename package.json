@@ -7,6 +7,7 @@
     "packages/*"
   ],
   "scripts": {
+    "build": "turbo run build",
     "build:ui": "turbo run build:ui",
     "dev": "turbo run dev --filter docs lrc-ui",
     "lint": "turbo run lint",

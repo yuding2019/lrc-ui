@@ -23,11 +23,11 @@ const LIVE_PREVIEW_PROPS: Record<string, unknown> = {
 function ComponentPreview(props: ComponentPreviewProps) {
   const { children } = props;
 
+  const [expandCode, setExpandCode] = useState(false);
+
   if (!React.isValidElement(children)) {
     return null;
   }
-
-  const [expandCode, setExpandCode] = useState(false);
 
   return (
     <div className={styles.wrapper}>
