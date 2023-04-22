@@ -2,15 +2,15 @@ $fontFamily: 'Segoe UI', 'Segoe UI Web (West European)', -apple-system, BlinkMac
 
 $classNamePrefix: 'lrc';
 
-$fontWeightRegular: 400;
+$fontWeightRegular: 300;
 $fontWeightMedium: 500;
-$fontWeightSemibold: 600;
 $fontWeightBold: 700;
 
 $fontSize1: 10px;
 $fontSize2: 12px;
 $fontSize3: 14px;
 $fontSize4: 16px;
+
 $fontSize5: 18px;
 $fontSize6: 20px;
 $fontSize7: 22px;
@@ -22,12 +22,13 @@ $lineHeight1: 14px;
 $lineHeight2: 16px;
 $lineHeight3: 20px;
 $lineHeight4: 22px;
+
 $lineHeight5: 24px;
 $lineHeight6: 28px;
-$lineHeight7: 30px;
-$lineHeight8: 32px;
-$lineHeight9: 34px;
-$lineHeight10: 36px;
+$lineHeight7: 36px;
+$lineHeight8: 48px;
+$lineHeight9: 64px;
+$lineHeight10: 84px;
 
 $brNone: 0px;
 $brSM: 4px;
@@ -77,6 +78,17 @@ $gray6: darken($grayPrimary, 10%);
 $gray7: darken($grayPrimary, 20%);
 $gray8: darken($grayPrimary, 30%);
 $gray9: darken($grayPrimary, 40%);
+
+$purplePrimary: #6610f2;
+$purple1: lighten($purplePrimary, 40%);
+$purple2: lighten($purplePrimary, 30%);
+$purple3: lighten($purplePrimary, 20%);
+$purple4: lighten($purplePrimary, 10%);
+$purple5: $purplePrimary;
+$purple6: darken($purplePrimary, 10%);
+$purple7: darken($purplePrimary, 20%);
+$purple8: darken($purplePrimary, 30%);
+$purple9: darken($purplePrimary, 40%);
 
 $white: #fff;
 $black: #000;

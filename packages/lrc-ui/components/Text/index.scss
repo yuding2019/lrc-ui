@@ -8,27 +8,35 @@ $text: #{$classNamePrefix}-text;
   font-weight: $fontWeightMedium;
   filter: unset;
 
-  &__xs {
+  &--xs {
     @include normalFontXS;
   }
 
-  &__sm {
+  &--sm {
     @include normalFontSM;
   }
 
-  &__md {
+  &--md {
     @include normalFontMD;
   }
 
-  &__lg {
+  &--lg {
     @include normalFontLG;
   }
 
-  &__bold {
-    font-weight: $fontWeightSemibold;
+  &--light {
+    font-weight: $fontWeightRegular;
   }
 
-  &__inline {
+  &--default {
+    font-weight: $fontWeightMedium;
+  }
+
+  &--bold {
+    font-weight: $fontWeightBold;
+  }
+
+  &--inline {
     display: inline-block;
   }
 }

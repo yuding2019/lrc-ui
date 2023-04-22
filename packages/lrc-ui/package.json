@@ -11,8 +11,8 @@
   ],
   "scripts": {
     "lint": "eslint *.ts*",
-    "build:ui": "npm run clean && rollup -c rollup.config.js && npm run build:type",
     "clean": "rimraf ./es",
+    "build:ui": "npm run clean && rollup -c rollup.config.js && npm run build:type",
     "build:type": "tsc"
   },
   "devDependencies": {

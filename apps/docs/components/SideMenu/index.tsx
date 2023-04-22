@@ -37,7 +37,8 @@ const SideMenu: React.FC = () => {
 
   return (
     <div className={styles.wrapper}>
-      {LRC_UI_ROUTES.map((item) => menuItemRender(item))}
+      <div className={styles.iconWrap}>Lrc UI</div>
+      <div className={styles.list}>{LRC_UI_ROUTES.map((item) => menuItemRender(item))}</div>
     </div>
   );
 };

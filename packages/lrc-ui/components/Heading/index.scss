@@ -6,31 +6,39 @@ $heading: #{$classNamePrefix}-heading;
   @include reset;
   font-family: $fontFamily;
 
-  &__1 {
+  &--1 {
     @include heading1;
   }
 
-  &__2 {
+  &--2 {
     @include heading2;
   }
 
-  &__3 {
+  &--3 {
     @include heading3;
   }
 
-  &__4 {
+  &--4 {
     @include heading4;
   }
 
-  &__5 {
+  &--5 {
     @include heading5;
   }
 
-  &__6 {
+  &--6 {
     @include heading6;
   }
 
-  &__bold {
+  &--light {
+    font-weight: $fontWeightRegular;
+  }
+
+  &--default {
+    font-weight: $fontWeightMedium;
+  }
+
+  &--bold {
     font-weight: $fontWeightBold;
   }
 }

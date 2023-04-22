@@ -1,8 +1,8 @@
-# Button
+# Button 组件
 
 就是按钮，没啥好说的。
 
-## 按钮类型
+### 按钮类型
 
 分为`primary` `default` `text` `link`四类按钮。
 
@@ -29,7 +29,7 @@
 </>
 ```
 
-## 按钮大小
+### 按钮大小
 
 支持`sm` `md` `lg`三种尺寸。
 
@@ -67,7 +67,7 @@
 </>
 ```
 
-## 危险操作
+### 危险按钮
 
 用于警告，提示危险操作。
 
@@ -88,16 +88,13 @@
     <Button type="text" danger>
       Danger Text Button
     </Button>
-    <Button type="link" danger>
-      Danger Link Button
-    </Button>
   </div>
 </>
 ```
 
-## Link Button
+### 链接按钮
 
-不是单纯的`link`类型的 button，当传递了`href`属性，会使用`<a />`进行渲染按钮。
+当传递了`href`属性，会使用`<a />`进行渲染按钮。
 
 ```tsx
 <>
@@ -116,9 +113,9 @@
 </>
 ```
 
-## 按钮状态
+### 按钮状态
 
-支持禁用和加载状态。
+支持禁用和加载状态，处于禁用和加载时，不会响应任何事件。
 
 ```tsx
 <>
@@ -130,6 +127,8 @@
     }
   `}</style>
 
+  <div>禁用按钮</div>
+  <br />
   <div className="demo">
     <Button type="primary" disabled>
       Primary Button
@@ -148,9 +147,11 @@
       Danger Button
     </Button>
     <Button type="link" href="/" disabled>
-      Href Button
+      Link Button
     </Button>
   </div>
+  <br />
+  <div>loading 按钮</div>
   <br />
   <div className="demo">
     <Button type="primary" loading>
@@ -170,8 +171,8 @@
       Danger Button
     </Button>
     <Button type="link" href="/" loading>
-      Href Button
+      Link Button
     </Button>
   </div>
-</>
+</div>
 ```

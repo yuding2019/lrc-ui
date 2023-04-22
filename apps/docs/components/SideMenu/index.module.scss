@@ -2,32 +2,60 @@
 
 .wrapper {
   width: 320px;
-  height: 100%;
+  height: 100vh;
+  max-height: 100vh;
   padding: $spacing16;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+}
+
+.iconWrap {
+  width: 100%;
+  height: 64px;
+  line-height: 64px;
+  font-size: 32px;
+  font-weight: lighter;
+}
+
+.list {
+  height: calc(100vh - 64px);
+  overflow: auto;
 }
 
 .item {
   display: inline-block;
+  position: relative;
   width: 100%;
   font-size: $fontSize4;
   padding: $spacing08 $spacing12;
   font-weight: $fontWeightMedium;
+  color: $gray9;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.15s ease-in-out;
   border-radius: $brLG;
   margin-bottom: $spacing04;
 
-  &:hover {
-    color: $blue5;
-    background-color: $blue1;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 0;
+    width: 3px;
+    border-radius: 8px;
+    background-color: currentColor;
+    transition: all 0.15s ease-in-out;
   }
 
-  &.active {
+  &:hover, &.active {
     color: $blue5;
-    background-color: $blue1;
+  }
+
+  &.active::before {
+    height: 12px;
   }
 }
 

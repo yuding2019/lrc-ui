@@ -8,7 +8,7 @@ import "./index.scss";
 export interface TextProps {
   type?: "block" | "inline";
   size?: "xs" | "sm" | "md" | "lg";
-  bold?: boolean;
+  weight?: "light" | "default" | "bold";
   style?: React.CSSProperties;
   className?: string;
 }
@@ -17,7 +17,7 @@ function Text(props: React.PropsWithChildren<TextProps>) {
   const {
     type = "inline",
     size = "md",
-    bold,
+    weight = "default",
     style,
     className,
     children,
@@ -26,16 +26,14 @@ function Text(props: React.PropsWithChildren<TextProps>) {
   const actualClassName = classNames(
     className,
     mainClassName,
-    `${mainClassName}__${size}`,
-    {
-      [`${mainClassName}__bold`]: bold,
-    }
+    `${mainClassName}--${size}`,
+    `${mainClassName}--${weight}`,
   );
 
   if (type === "inline") {
     return (
       <span
-        className={classNames(actualClassName, `${mainClassName}__inline`)}
+        className={classNames(actualClassName, `${mainClassName}--inline`)}
         style={style}
       >
         {children}

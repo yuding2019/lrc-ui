@@ -4,6 +4,13 @@ export const LRC_UI_ROUTES = [
     name: "Home",
   },
   {
+    name: "内容组件",
+    children: [
+      { path: "/text", name: "Text" },
+      { path: "/heading", name: "Heading" },
+    ],
+  },
+  {
     name: "通用组件",
     children: [
       {

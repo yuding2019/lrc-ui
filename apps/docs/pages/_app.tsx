@@ -16,12 +16,12 @@ import styles from "./_app.module.scss";
 const map = {
   pre: ComponentPreview,
   p: (props: any) => <Text type="block" size="lg" {...props} />,
-  h1: (props: any) => <Heading level={1} {...props} />,
-  h2: (props: any) => <Heading level={2} {...props} />,
-  h3: (props: any) => <Heading level={3} {...props} />,
-  h4: (props: any) => <Heading level={4} {...props} />,
-  h5: (props: any) => <Heading level={5} {...props} />,
-  h6: (props: any) => <Heading level={6} {...props} />,
+  h1: (props: any) => <Heading level={1} weight="light" {...props} />,
+  h2: (props: any) => <Heading level={2} weight="light" {...props} />,
+  h3: (props: any) => <Heading level={3} weight="light" {...props} />,
+  h4: (props: any) => <Heading level={4} weight="light" {...props} />,
+  h5: (props: any) => <Heading level={5} weight="light" {...props} />,
+  h6: (props: any) => <Heading level={6} weight="light" {...props} />,
   a: (props: any) => <Link {...props} />,
 };
 
@@ -40,7 +40,6 @@ function MyApp(props: AppProps) {
   return (
     <div className={styles.wrapper}>
       <SideMenu />
-      <div className={styles.divider} />
       <div className={styles.contentWrap}>
         <div className={styles.content}>
           <MDXProvider components={map}>
