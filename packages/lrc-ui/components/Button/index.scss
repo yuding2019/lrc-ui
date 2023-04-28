@@ -3,7 +3,7 @@
 $btn: #{$classNamePrefix}-btn;
 
 @mixin dangerBtn($className) {
-  color: $white;
+  color: $gray0;
   border-color: $red5;
   background-color: $red5;
 
@@ -15,10 +15,10 @@ $btn: #{$classNamePrefix}-btn;
   &.#{$className}-outline {
     color: $red5;
     border-color: $red5;
-    background-color: $white;
+    background-color: $gray0;
 
     &:not(.#{$btn}--disabled):hover {
-      color: $white;
+      color: $gray0;
       border-color: $red5;
       background-color: $red5;
     }
@@ -30,7 +30,7 @@ $btn: #{$classNamePrefix}-btn;
   align-items: center;
   width: fit-content;
   height: fit-content;
-  border: 1px solid rgba($white, 0);
+  border: 1px solid rgba($gray0, 0);
   border-radius: $brMD;
   outline: none;
   cursor: pointer;
@@ -59,7 +59,7 @@ $btn: #{$classNamePrefix}-btn;
 }
 
 .#{$btn}--primary {
-  color: $white;
+  color: $gray0;
   border-color: $blue5;
   background-color: $blue5;
 
@@ -71,10 +71,10 @@ $btn: #{$classNamePrefix}-btn;
   &-outline {
     color: $blue5;
     border-color: $blue5;
-    background-color: $white;
+    background-color: $gray0;
 
     &:not(.#{$btn}--disabled):hover {
-      color: $white;
+      color: $gray0;
       border-color: $blue5;
       background-color: $blue5;
     }
@@ -87,8 +87,8 @@ $btn: #{$classNamePrefix}-btn;
 
 .#{$btn}--default {
   color: $gray9;
-  border-color: $gray2;
-  background-color: $white;
+  border-color: $gray3;
+  background-color: $gray0;
 
   &:not(.#{$btn}--disabled):hover {
     border-color: $gray5;
@@ -102,11 +102,11 @@ $btn: #{$classNamePrefix}-btn;
 
 .#{$btn}--text {
   color: $gray9;
-  background-color: $white;
+  background-color: $gray0;
 
   &:not(.#{$btn}--disabled):hover {
-    border-color: $gray2;
-    background-color: $gray2;
+    border-color: $gray1;
+    background-color: $gray1;
   }
 
   &-danger {
@@ -122,8 +122,8 @@ $btn: #{$classNamePrefix}-btn;
 
 .#{$btn}--link {
   color: $blue5;
-  border-color: $white;
-  background-color: $white;
+  border-color: $gray0;
+  background-color: $gray0;
 
   &:not(.#{$btn}--disabled):hover {
     color: $blue4;
@@ -147,5 +147,5 @@ $btn: #{$classNamePrefix}-btn;
 }
 
 .#{$btn}__loading {
-  margin-right: $spacing06;
+  margin-right: $spacing08;
 }

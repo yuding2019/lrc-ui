@@ -5,8 +5,7 @@ $text: #{$classNamePrefix}-text;
 .#{$text} {
   @include reset;
   font-family: $fontFamily;
-  font-weight: $fontWeightMedium;
-  filter: unset;
+  filter: brightness(1);
 
   &--xs {
     @include normalFontXS;

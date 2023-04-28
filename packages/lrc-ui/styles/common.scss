@@ -18,62 +18,66 @@
   white-space: nowrap;
 }
 
+@mixin baseFont {
+  font-variant-numeric: tabular-nums;
+}
+
 @mixin normalFontXS {
+  @include baseFont();
   font-size: $fontSize1;
   line-height: $lineHeight1;
-  font-weight: $fontWeightRegular;
 }
 
 @mixin normalFontSM {
+  @include baseFont();
   font-size: $fontSize2;
   line-height: $lineHeight2;
-  font-weight: $fontWeightMedium;
 }
 
 @mixin normalFontMD {
+  @include baseFont();
   font-size: $fontSize3;
   line-height: $lineHeight3;
-  font-weight: $fontWeightMedium;
 }
 
 @mixin normalFontLG {
+  @include baseFont();
   font-size: $fontSize4;
   line-height: $lineHeight4;
-  font-weight: $fontWeightMedium;
 }
 
 @mixin heading1 {
+  @include baseFont();
   font-size: $fontSize10;
   line-height: $lineHeight10;
-  font-weight: $fontWeightMedium;
 }
 
 @mixin heading2 {
+  @include baseFont();
   font-size: $fontSize9;
   line-height: $lineHeight9;
-  font-weight: $fontWeightMedium;
 }
 
 @mixin heading3 {
+  @include baseFont();
   font-size: $fontSize8;
   line-height: $lineHeight8;
-  font-weight: $fontWeightMedium;
 }
 
 @mixin heading4 {
+  @include baseFont();
   font-size: $fontSize7;
   line-height: $lineHeight7;
-  font-weight: $fontWeightMedium;
 }
 
 @mixin heading5 {
+  @include baseFont();
   font-size: $fontSize6;
   line-height: $lineHeight6;
-  font-weight: $fontWeightMedium;
 }
 
 @mixin heading6 {
+  @include baseFont();
   font-size: $fontSize5;
   line-height: $lineHeight5;
-  font-weight: $fontWeightMedium;
 }

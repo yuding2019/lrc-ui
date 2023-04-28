@@ -5,7 +5,7 @@ import { getMainClassName } from "../../utils";
 
 import "./index.scss";
 
-export interface TextProps {
+export interface TextProps extends React.BaseHTMLAttributes<HTMLParagraphElement | HTMLSpanElement> {
   type?: "block" | "inline";
   size?: "xs" | "sm" | "md" | "lg";
   weight?: "light" | "default" | "bold";
@@ -21,6 +21,7 @@ function Text(props: React.PropsWithChildren<TextProps>) {
     style,
     className,
     children,
+    ...restProps
   } = props;
   const mainClassName = getMainClassName("text");
   const actualClassName = classNames(
@@ -35,6 +36,7 @@ function Text(props: React.PropsWithChildren<TextProps>) {
       <span
         className={classNames(actualClassName, `${mainClassName}--inline`)}
         style={style}
+        {...restProps}
       >
         {children}
       </span>
@@ -42,7 +44,7 @@ function Text(props: React.PropsWithChildren<TextProps>) {
   }
 
   return (
-    <p className={actualClassName} style={style}>
+    <p className={actualClassName} style={style} {...restProps}>
       {children}
     </p>
   );

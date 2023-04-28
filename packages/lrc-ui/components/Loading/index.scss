@@ -10,6 +10,15 @@ $loadingLG: $fontSize4;
 .#{$loading} {
   display: inline-flex;
   align-items: center;
+  overflow: hidden;
+
+  &--disabled .#{$loadingTrack} {
+    width: 0;
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .#{$loadingTrack} {
@@ -17,30 +26,31 @@ $loadingLG: $fontSize4;
   border-radius: $brCircle;
   box-sizing: border-box;
   position: relative;
+  transition: width 0.15s ease-in-out;
 
-  &__sm {
+  &--sm {
     width: $loadingSM;
     height: $loadingSM;
   }
 
-  &__md {
+  &--md {
     width: $loadingMD;
     height: $loadingMD;
   }
 
-  &__lg {
+  &--lg {
     width: $loadingLG;
     height: $loadingLG;
   }
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 50%;
     height: 50%;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     border-top: 1px solid currentColor;
     border-left: 1px solid currentColor;
     border-top-left-radius: $brCircle;

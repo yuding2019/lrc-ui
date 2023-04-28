@@ -8,7 +8,7 @@ import { getMainClassName } from "../../utils";
 
 import "./index.scss";
 
-export interface ButtonProps {
+export interface ButtonProps extends React.BaseHTMLAttributes<HTMLButtonElement | HTMLAnchorElement> {
   size?: "sm" | "md" | "lg";
   type?: "primary" | "default" | "text" | "link";
   outline?: boolean;
@@ -36,6 +36,7 @@ function Button(props: React.PropsWithChildren<ButtonProps>) {
     style,
     children,
     onClick,
+    ...restBtnProps
   } = props;
   const mainBtnClassName = getMainClassName("btn");
   const actualBtnClassName = classNames(
@@ -67,8 +68,13 @@ function Button(props: React.PropsWithChildren<ButtonProps>) {
         className={actualBtnClassName}
         style={style}
         onClick={handleClick}
+        {...restBtnProps}
       >
-        {loading && <Loading size={size} className={`${mainBtnClassName}__loading`} />}
+        <Loading
+          size={size}
+          disabled={!loading}
+          className={classNames({ [`${mainBtnClassName}__loading`]: loading })}
+        />
         <Text size={size}>{children}</Text>
       </a>
     );
@@ -81,8 +87,13 @@ function Button(props: React.PropsWithChildren<ButtonProps>) {
       style={style}
       disabled={loading || disabled}
       onClick={handleClick}
+      {...restBtnProps}
     >
-      {loading && <Loading size={size} className={`${mainBtnClassName}__loading`} />}
+      <Loading
+        size={size}
+        disabled={!loading}
+        className={classNames({ [`${mainBtnClassName}__loading`]: loading })}
+      />
       <Text size={size}>{children}</Text>
     </button>
   );
