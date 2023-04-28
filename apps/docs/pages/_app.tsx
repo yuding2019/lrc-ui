@@ -23,6 +23,11 @@ const map = {
   h5: (props: any) => <Heading level={5} weight="light" {...props} />,
   h6: (props: any) => <Heading level={6} weight="light" {...props} />,
   a: (props: any) => <Link {...props} />,
+  code: (props: any) => (
+    <span className={styles.tag}>
+      <Text size="lg" weight="bold" {...props} />
+    </span>
+  ),
 };
 
 function MyApp(props: AppProps) {

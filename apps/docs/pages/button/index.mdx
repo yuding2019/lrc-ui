@@ -106,73 +106,59 @@
   `}</style>
 
   <div className="demo">
-    <Button href="/">
-      点击会返回主页
-    </Button>
+    <Button href="/">点击会返回主页</Button>
   </div>
 </>
 ```
 
 ### 按钮状态
 
-支持禁用和加载状态，处于禁用和加载时，不会响应任何事件。
+支持禁用和加载状态，处于禁用和加载时，`onClick`事件不会触发。
 
 ```tsx
-<>
-  <style>{`
-    div.demo {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-  `}</style>
+function Demo() {
+  const [loading, setLoading] = React.useState(false);
 
-  <div>禁用按钮</div>
-  <br />
-  <div className="demo">
-    <Button type="primary" disabled>
-      Primary Button
-    </Button>
-    <Button disabled>Default Button</Button>
-    <Button type="text" disabled>
-      Text Button
-    </Button>
-    <Button type="primary" outline disabled>
-      Primary Outline Button
-    </Button>
-    <Button danger disabled>
-      Danger Button
-    </Button>
-    <Button danger disabled outline>
-      Danger Button
-    </Button>
-    <Button type="link" href="/" disabled>
-      Link Button
-    </Button>
-  </div>
-  <br />
-  <div>loading 按钮</div>
-  <br />
-  <div className="demo">
-    <Button type="primary" loading>
-      Primary Button
-    </Button>
-    <Button loading>Default Button</Button>
-    <Button type="text" loading>
-      Text Button
-    </Button>
-    <Button type="primary" outline loading>
-      Primary Outline Button
-    </Button>
-    <Button danger loading>
-      Danger Button
-    </Button>
-    <Button danger loading outline>
-      Danger Button
-    </Button>
-    <Button type="link" href="/" loading>
-      Link Button
-    </Button>
-  </div>
-</div>
+  return (
+    <div>
+      <style>
+        {`
+        div.demo {
+          display: flex;
+          gap: 16px;
+          flex-wrap: wrap;
+        }
+        `}
+      </style>
+
+      <Button onClick={() => setLoading((prev) => !prev)}>{loading ? '停止 loading' : '开始 loading'}</Button>
+
+      <br />
+      <br />
+      <br />
+
+      <div className="demo">
+        <Button type="primary" loading={loading}>
+          Primary Button
+        </Button>
+        <Button loading={loading}>Default Button</Button>
+        <Button type="text" loading={loading}>
+          Text Button
+        </Button>
+        <Button type="primary" outline loading={loading}>
+          Primary Outline Button
+        </Button>
+        <Button danger loading={loading}>
+          Danger Button
+        </Button>
+        <Button danger loading={loading} outline>
+          Danger Button
+        </Button>
+        <Button type="link" href="/" loading={loading}>
+          Link Button
+        </Button>
+      </div>
+    </div>
+  );
+}
 ```
