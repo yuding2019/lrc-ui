@@ -1,26 +1,26 @@
-import React from "react";
-import classNames from "classnames";
+import React from 'react';
 
-import { getMainClassName } from "../../utils";
+import classNames from 'classnames';
 
-import "./index.scss";
+import { getMainClassName } from '../../utils';
+import './index.scss';
 
 export interface HeadingProps {
   level?: 1 | 2 | 3 | 4 | 5 | 6;
-  weight?: "light" | "default" | "bold";
+  weight?: 'light' | 'default' | 'bold';
   style?: React.CSSProperties;
   className?: string;
 }
 
 function Heading(props: React.PropsWithChildren<HeadingProps>) {
-  const { level = 1, weight = "default", style, className, children } = props;
+  const { level = 1, weight = 'default', style, className, children } = props;
   const HeadingHtmlTag = `h${level}` as any;
-  const mainClassName = getMainClassName("heading");
+  const mainClassName = getMainClassName('heading');
   const actualClassName = classNames(
     className,
     mainClassName,
     `${mainClassName}--${level}`,
-    `${mainClassName}--${weight}`
+    `${mainClassName}--${weight}`,
   );
 
   return (

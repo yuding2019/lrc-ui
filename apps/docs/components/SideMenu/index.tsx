@@ -1,11 +1,11 @@
-import { useRouter } from "next/router";
-import Link from "next/link";
+import classNames from 'classnames';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
-import { LRC_UI_ROUTES } from "../../router";
+import { Text } from 'lrc-ui';
 
-import styles from "./index.module.scss";
-import classNames from "classnames";
-import { Text } from "lrc-ui";
+import { LRC_UI_ROUTES } from '../../router';
+import styles from './index.module.scss';
 
 export type LrcUiRoute = (typeof LRC_UI_ROUTES)[number];
 
@@ -38,7 +38,9 @@ const SideMenu: React.FC = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.iconWrap}>Lrc UI</div>
-      <div className={styles.list}>{LRC_UI_ROUTES.map((item) => menuItemRender(item))}</div>
+      <div className={styles.list}>
+        {LRC_UI_ROUTES.map((item) => menuItemRender(item))}
+      </div>
     </div>
   );
 };

@@ -1,21 +1,21 @@
 export const LRC_UI_ROUTES = [
   {
-    path: "/",
-    name: "Home",
+    path: '/',
+    name: 'Home',
   },
   {
-    name: "内容组件",
+    name: '内容组件',
     children: [
-      { path: "/text", name: "Text" },
-      { path: "/heading", name: "Heading" },
+      { path: '/text', name: 'Text' },
+      { path: '/heading', name: 'Heading' },
     ],
   },
   {
-    name: "通用组件",
+    name: '通用组件',
     children: [
       {
-        path: "/button",
-        name: "Button",
+        path: '/button',
+        name: 'Button',
       },
     ],
   },

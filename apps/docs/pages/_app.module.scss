@@ -1,12 +1,12 @@
-@import "~lrc-ui/styles/variable.scss";
+@import '~lrc-ui/styles/variable.scss';
 
 @font-face {
   font-family: JetBrainsMono;
-  src: url("../public/font/JetBrainsMono-Regular.woff2");
+  src: url('../public/font/JetBrainsMono-Regular.woff2');
 }
 
 .emptyLoadFont {
-  font-family: "JetBrainsMono";
+  font-family: 'JetBrainsMono';
   position: absolute;
   display: none;
   width: 0;
@@ -25,14 +25,14 @@
   position: relative;
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: url("../public/asset/back.svg") no-repeat,
-      url("../public/asset/back2.svg") no-repeat;
+    background: url('../public/asset/back.svg') no-repeat,
+      url('../public/asset/back2.svg') no-repeat;
     background-size: contain;
     opacity: 0.1;
     z-index: 0;
@@ -41,14 +41,14 @@
   }
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: url("../public/asset/back3.svg") no-repeat,
-      url("../public/asset/back2.svg") no-repeat;
+    background: url('../public/asset/back3.svg') no-repeat,
+      url('../public/asset/back2.svg') no-repeat;
     background-size: contain;
     opacity: 0.1;
     z-index: 0;

@@ -1,14 +1,13 @@
-import React from "react";
-import classNames from "classnames";
+import React from 'react';
 
-import Text from "../Text";
+import classNames from 'classnames';
 
-import { getMainClassName } from "../../utils";
-
-import "./index.scss";
+import { getMainClassName } from '../../utils';
+import Text from '../Text';
+import './index.scss';
 
 export interface LoadingProps {
-  size?: "sm" | "md" | "lg";
+  size?: 'sm' | 'md' | 'lg';
   message?: string;
   disabled?: boolean;
   style?: React.CSSProperties;
@@ -16,9 +15,9 @@ export interface LoadingProps {
 }
 
 const Loading: React.FC<LoadingProps> = (props) => {
-  const { size = "sm", message, disabled, style, className } = props;
-  const mainClassName = getMainClassName("loading");
-  const loadingTrackClassName = getMainClassName("loading-track");
+  const { size = 'sm', message, disabled, style, className } = props;
+  const mainClassName = getMainClassName('loading');
+  const loadingTrackClassName = getMainClassName('loading-track');
 
   return (
     <span
@@ -30,7 +29,7 @@ const Loading: React.FC<LoadingProps> = (props) => {
       <span
         className={classNames(
           loadingTrackClassName,
-          `${loadingTrackClassName}--${size}`
+          `${loadingTrackClassName}--${size}`,
         )}
       />
       {message && <Text size={size}>{message}</Text>}

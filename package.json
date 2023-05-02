@@ -11,12 +11,14 @@
     "build:ui": "turbo run build:ui",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
+    "prettier": "turbo run prettier",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
     "eslint-config-custom": "workspace:*",
     "prettier": "latest",
-    "turbo": "latest"
+    "turbo": "latest",
+    "@trivago/prettier-plugin-sort-imports": "^4.1.1"
   },
   "engines": {
     "node": ">=14.0.0"

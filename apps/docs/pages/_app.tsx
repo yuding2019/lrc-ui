@@ -1,17 +1,16 @@
-import { useEffect, useState } from "react";
-import { MDXProvider } from "@mdx-js/react";
-import Link from "next/link";
+import { useEffect, useState } from 'react';
 
-import { Text, Heading } from "lrc-ui";
+import { MDXProvider } from '@mdx-js/react';
+import type { AppProps } from 'next/app';
+import Link from 'next/link';
 
-import SideMenu from "../components/SideMenu";
-import ComponentPreview from "../components/ComponentPreview";
+import { Heading, Text } from 'lrc-ui';
 
-import type { AppProps } from "next/app";
-
-import "../styles/editor-theme.css";
-import "../styles/reset.css";
-import styles from "./_app.module.scss";
+import ComponentPreview from '../components/ComponentPreview';
+import SideMenu from '../components/SideMenu';
+import '../styles/editor-theme.css';
+import '../styles/reset.css';
+import styles from './_app.module.scss';
 
 const map = {
   pre: ComponentPreview,

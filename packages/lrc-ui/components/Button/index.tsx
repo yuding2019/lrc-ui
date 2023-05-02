@@ -1,16 +1,16 @@
-import React from "react";
-import classNames from "classnames";
+import React from 'react';
 
-import Text from "../Text";
-import Loading from "../Loading";
+import classNames from 'classnames';
 
-import { getMainClassName } from "../../utils";
+import { getMainClassName } from '../../utils';
+import Loading from '../Loading';
+import Text from '../Text';
+import './index.scss';
 
-import "./index.scss";
-
-export interface ButtonProps extends React.BaseHTMLAttributes<HTMLButtonElement | HTMLAnchorElement> {
-  size?: "sm" | "md" | "lg";
-  type?: "primary" | "default" | "text" | "link";
+export interface ButtonProps
+  extends React.BaseHTMLAttributes<HTMLButtonElement | HTMLAnchorElement> {
+  size?: 'sm' | 'md' | 'lg';
+  type?: 'primary' | 'default' | 'text' | 'link';
   outline?: boolean;
   round?: boolean;
   danger?: boolean;
@@ -24,8 +24,8 @@ export interface ButtonProps extends React.BaseHTMLAttributes<HTMLButtonElement 
 
 function Button(props: React.PropsWithChildren<ButtonProps>) {
   const {
-    size = "md",
-    type = "default",
+    size = 'md',
+    type = 'default',
     round,
     danger,
     outline,
@@ -38,7 +38,7 @@ function Button(props: React.PropsWithChildren<ButtonProps>) {
     onClick,
     ...restBtnProps
   } = props;
-  const mainBtnClassName = getMainClassName("btn");
+  const mainBtnClassName = getMainClassName('btn');
   const actualBtnClassName = classNames(
     mainBtnClassName,
     className,
@@ -49,7 +49,7 @@ function Button(props: React.PropsWithChildren<ButtonProps>) {
       [`${mainBtnClassName}--disabled`]: loading || disabled,
       [`${mainBtnClassName}--${type}-danger`]: danger,
       [`${mainBtnClassName}--${type}-outline`]: outline,
-    }
+    },
   );
 
   const handleClick = (e: React.MouseEvent) => {
@@ -99,6 +99,6 @@ function Button(props: React.PropsWithChildren<ButtonProps>) {
   );
 }
 
-Button.displayName = "Button";
+Button.displayName = 'Button';
 
 export default Button;

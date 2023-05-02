@@ -1,29 +1,30 @@
-import React from "react";
-import classNames from "classnames";
+import React from 'react';
 
-import { getMainClassName } from "../../utils";
+import classNames from 'classnames';
 
-import "./index.scss";
+import { getMainClassName } from '../../utils';
+import './index.scss';
 
-export interface TextProps extends React.BaseHTMLAttributes<HTMLParagraphElement | HTMLSpanElement> {
-  type?: "block" | "inline";
-  size?: "xs" | "sm" | "md" | "lg";
-  weight?: "light" | "default" | "bold";
+export interface TextProps
+  extends React.BaseHTMLAttributes<HTMLParagraphElement | HTMLSpanElement> {
+  type?: 'block' | 'inline';
+  size?: 'xs' | 'sm' | 'md' | 'lg';
+  weight?: 'light' | 'default' | 'bold';
   style?: React.CSSProperties;
   className?: string;
 }
 
 function Text(props: React.PropsWithChildren<TextProps>) {
   const {
-    type = "inline",
-    size = "md",
-    weight = "default",
+    type = 'inline',
+    size = 'md',
+    weight = 'default',
     style,
     className,
     children,
     ...restProps
   } = props;
-  const mainClassName = getMainClassName("text");
+  const mainClassName = getMainClassName('text');
   const actualClassName = classNames(
     className,
     mainClassName,
@@ -31,7 +32,7 @@ function Text(props: React.PropsWithChildren<TextProps>) {
     `${mainClassName}--${weight}`,
   );
 
-  if (type === "inline") {
+  if (type === 'inline') {
     return (
       <span
         className={classNames(actualClassName, `${mainClassName}--inline`)}

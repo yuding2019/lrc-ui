@@ -1,4 +1,4 @@
-@import "../../styles/variable.scss";
+@import '../../styles/variable.scss';
 
 $loading: #{$classNamePrefix}-loading;
 $loadingTrack: #{$loading}-track;
@@ -44,7 +44,7 @@ $loadingLG: $fontSize4;
   }
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;

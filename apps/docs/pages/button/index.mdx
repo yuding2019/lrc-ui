@@ -131,7 +131,9 @@ function Demo() {
         `}
       </style>
 
-      <Button onClick={() => setLoading((prev) => !prev)}>{loading ? '停止 loading' : '开始 loading'}</Button>
+      <Button onClick={() => setLoading((prev) => !prev)}>
+        {loading ? '停止 loading' : '开始 loading'}
+      </Button>
 
       <br />
       <br />

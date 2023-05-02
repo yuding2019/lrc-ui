@@ -1,0 +1,7 @@
+dist
+es
+coverage
+
+.next/
+out/
+build

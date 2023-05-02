@@ -10,7 +10,7 @@
   font-family: $fontFamily;
   margin-top: 8px;
   margin-bottom: 32px;
-  
+
   & pre {
     font-family: $fontFamily;
   }
@@ -39,7 +39,7 @@
   &:hover {
     color: $blue5;
   }
-  
+
   &.active {
     color: $blue5;
   }

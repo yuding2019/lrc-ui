@@ -1,18 +1,19 @@
-import { LiveEditor, LivePreview, LiveProvider, LiveError } from "react-live";
-import { Code20Regular } from "@fluentui/react-icons";
-import classNames from "classnames";
+import React, { useState } from 'react';
+import { LiveEditor, LiveError, LivePreview, LiveProvider } from 'react-live';
 
-import * as Scope from "lrc-ui";
+import { Code20Regular } from '@fluentui/react-icons';
+import classNames from 'classnames';
 
-import styles from "./index.module.scss";
-import React, { useState } from "react";
+import * as Scope from 'lrc-ui';
+
+import styles from './index.module.scss';
 
 export interface ComponentPreviewProps {
   children?: React.ReactNode;
 }
 
 const EDITOR_THEME = {
-  plain: { color: "unset", backgroundColor: "#fafafa" },
+  plain: { color: 'unset', backgroundColor: '#fafafd' },
   styles: [],
 };
 
