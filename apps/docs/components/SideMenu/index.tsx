@@ -5,6 +5,8 @@ import { useRouter } from 'next/router';
 import { Text } from 'lrc-ui';
 
 import { LRC_UI_ROUTES } from '../../router';
+
+import logo from '../../public/asset/logo.svg';
 import styles from './index.module.scss';
 
 export type LrcUiRoute = (typeof LRC_UI_ROUTES)[number];
@@ -30,14 +32,19 @@ const SideMenu: React.FC = () => {
           [styles.active]: pathname === item.path,
         })}
       >
-        {item.name}
+        <Text weight={pathname === item.path ? 'bold' : 'default'} size="lg">
+          {item.name}
+        </Text>
       </Link>
     );
   };
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.iconWrap}>Lrc UI</div>
+      <Link href="/" className={styles.iconWrap}>
+        <img src={logo.src} alt="" />
+        Lrc
+      </Link>
       <div className={styles.list}>
         {LRC_UI_ROUTES.map((item) => menuItemRender(item))}
       </div>

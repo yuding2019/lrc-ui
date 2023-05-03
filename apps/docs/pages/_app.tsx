@@ -2,12 +2,15 @@ import { useEffect, useState } from 'react';
 
 import { MDXProvider } from '@mdx-js/react';
 import type { AppProps } from 'next/app';
+import Head from 'next/head';
 import Link from 'next/link';
 
 import { Heading, Text } from 'lrc-ui';
 
 import ComponentPreview from '../components/ComponentPreview';
 import SideMenu from '../components/SideMenu';
+
+import favicon from '../public/favicon.png';
 import '../styles/editor-theme.css';
 import '../styles/reset.css';
 import styles from './_app.module.scss';
@@ -42,17 +45,22 @@ function MyApp(props: AppProps) {
   }
 
   return (
-    <div className={styles.wrapper}>
-      <SideMenu />
-      <div className={styles.contentWrap}>
-        <div className={styles.content}>
-          <MDXProvider components={map}>
-            <Component {...pageProps} />
-          </MDXProvider>
+    <>
+      <Head>
+        <link rel="icon" type="image/png" href={favicon.src} />
+      </Head>
+      <div className={styles.wrapper}>
+        <SideMenu />
+        <div className={styles.contentWrap}>
+          <div className={styles.content}>
+            <MDXProvider components={map}>
+              <Component {...pageProps} />
+            </MDXProvider>
+          </div>
         </div>
+        <div className={styles.emptyLoadFont} />
       </div>
-      <div className={styles.emptyLoadFont} />
-    </div>
+    </>
   );
 }
 
