@@ -143,21 +143,24 @@ function Demo() {
         <Button type="primary" loading={loading}>
           Primary Button
         </Button>
+        <Button danger loading={loading}>
+          Danger Button
+        </Button>
         <Button loading={loading}>Default Button</Button>
         <Button type="text" loading={loading}>
           Text Button
         </Button>
+        <Button type="link" href="/" loading={loading}>
+          Link Button
+        </Button>
+      </div>
+      <br />
+      <div className="demo">
         <Button type="primary" outline loading={loading}>
           Primary Outline Button
         </Button>
-        <Button danger loading={loading}>
-          Danger Button
-        </Button>
         <Button danger loading={loading} outline>
-          Danger Button
-        </Button>
-        <Button type="link" href="/" loading={loading}>
-          Link Button
+          Danger Outline Button
         </Button>
       </div>
     </div>

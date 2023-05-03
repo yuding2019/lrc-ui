@@ -1,0 +1,72 @@
+@import '../../styles/common.scss';
+
+$tag: #{$classNamePrefix}-tag;
+
+.#{$tag} {
+  display: inline-flex;
+  position: relative;
+  height: fit-content;
+  border-radius: $brMD;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $gray0;
+    z-index: -1;
+  }
+
+  &--sm,
+  &--xs {
+    padding: $spacing02 $spacing06;
+  }
+
+  &--md {
+    padding: $spacing04 $spacing08;
+  }
+
+  &--lg {
+    padding: $spacing06 $spacing12;
+  }
+
+  &--round {
+    border-radius: $brCircle;
+  }
+}
+
+.#{$tag}--light {
+  &.#{$tag}--blue {
+    background-color: $blue1;
+    color: $blue5;
+  }
+
+  &.#{$tag}--red {
+    background-color: $red1;
+    color: $red5;
+  }
+
+  &.#{$tag}--gray {
+    background-color: $gray2;
+    color: $gray9;
+  }
+}
+
+.#{$tag}--dark {
+  &.#{$tag}--blue {
+    background-color: $blue5;
+    color: $blue0;
+  }
+
+  &.#{$tag}--red {
+    background-color: $red5;
+    color: $red0;
+  }
+
+  &.#{$tag}--gray {
+    background-color: $gray5;
+    color: $gray0;
+  }
+}

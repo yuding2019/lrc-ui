@@ -5,8 +5,8 @@ export function styleInject(css?: string) {
     return;
   }
 
-  var head = document.head || document.getElementsByTagName('head')[0];
-  var style = document.createElement('style');
+  const head = document.head || document.getElementsByTagName('head')[0];
+  const style = document.createElement('style');
   style.type = 'text/css';
   head.appendChild(style);
 

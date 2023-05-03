@@ -8,6 +8,7 @@ export const LRC_UI_ROUTES = [
     children: [
       { path: '/text', name: 'Text' },
       { path: '/heading', name: 'Heading' },
+      { path: '/tag', name: 'Tag' },
     ],
   },
   {

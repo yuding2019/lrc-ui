@@ -5,7 +5,8 @@ import classNames from 'classnames';
 import { getMainClassName } from '../../utils';
 import './index.scss';
 
-export interface HeadingProps {
+export interface HeadingProps
+  extends React.BaseHTMLAttributes<HTMLHeadingElement> {
   level?: 1 | 2 | 3 | 4 | 5 | 6;
   weight?: 'light' | 'default' | 'bold';
   style?: React.CSSProperties;
@@ -13,7 +14,14 @@ export interface HeadingProps {
 }
 
 function Heading(props: React.PropsWithChildren<HeadingProps>) {
-  const { level = 1, weight = 'default', style, className, children } = props;
+  const {
+    level = 1,
+    weight = 'default',
+    style,
+    className,
+    children,
+    ...restProps
+  } = props;
   const HeadingHtmlTag = `h${level}` as any;
   const mainClassName = getMainClassName('heading');
   const actualClassName = classNames(
@@ -24,7 +32,7 @@ function Heading(props: React.PropsWithChildren<HeadingProps>) {
   );
 
   return (
-    <HeadingHtmlTag className={actualClassName} style={style}>
+    <HeadingHtmlTag {...restProps} className={actualClassName} style={style}>
       {children}
     </HeadingHtmlTag>
   );
