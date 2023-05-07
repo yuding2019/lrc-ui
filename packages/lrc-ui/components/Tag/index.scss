@@ -19,8 +19,7 @@ $tag: #{$classNamePrefix}-tag;
     z-index: -1;
   }
 
-  &--sm,
-  &--xs {
+  &--sm {
     padding: $spacing02 $spacing06;
   }
 
@@ -37,36 +36,116 @@ $tag: #{$classNamePrefix}-tag;
   }
 }
 
-.#{$tag}--light {
+.#{$tag}--default {
   &.#{$tag}--blue {
-    background-color: $blue1;
+    background-color: $blue0;
     color: $blue5;
   }
 
   &.#{$tag}--red {
-    background-color: $red1;
+    background-color: $red0;
     color: $red5;
   }
 
   &.#{$tag}--gray {
-    background-color: $gray2;
+    background-color: $gray1;
     color: $gray9;
+  }
+
+  &.#{$tag}--purple {
+    background-color: $purple0;
+    color: $purple5;
+  }
+
+  &.#{$tag}--yellow {
+    background-color: $yellow0;
+    color: $yellow5;
+  }
+
+  &.#{$tag}--orange {
+    background-color: $orange1;
+    color: $orange5;
+  }
+
+  &.#{$tag}--pink {
+    background-color: $pink0;
+    color: $pink5;
+  }
+
+  &.#{$tag}--green {
+    background-color: $green0;
+    color: $green5;
   }
 }
 
-.#{$tag}--dark {
+.#{$tag}--fill {
+  color: $gray0;
   &.#{$tag}--blue {
     background-color: $blue5;
-    color: $blue0;
   }
 
   &.#{$tag}--red {
     background-color: $red5;
-    color: $red0;
   }
 
   &.#{$tag}--gray {
     background-color: $gray5;
-    color: $gray0;
+  }
+
+  &.#{$tag}--purple {
+    background-color: $purple5;
+  }
+
+  &.#{$tag}--yellow {
+    background-color: $yellow5;
+  }
+
+  &.#{$tag}--orange {
+    background-color: $orange5;
+  }
+
+  &.#{$tag}--pink {
+    background-color: $pink5;
+  }
+
+  &.#{$tag}--green {
+    background-color: $green5;
+  }
+}
+
+.#{$tag}--outline {
+  background-color: $gray0;
+  box-shadow: inset 0 0 0 1px currentColor;
+
+  &.#{$tag}--blue {
+    color: $blue5;
+  }
+
+  &.#{$tag}--red {
+    color: $red5;
+  }
+
+  &.#{$tag}--gray {
+    color: $gray7;
+  }
+
+  &.#{$tag}--purple {
+    color: $purple5;
+  }
+
+  &.#{$tag}--yellow {
+    color: $yellow5;
+  }
+
+  &.#{$tag}--orange {
+    color: $orange5;
+  }
+
+  &.#{$tag}--pink {
+    color: $pink5;
+  }
+
+  &.#{$tag}--green {
+    color: $green5;
   }
 }

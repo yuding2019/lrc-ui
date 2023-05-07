@@ -4,6 +4,70 @@ import { Tag } from 'lrc-ui';
 
 ### 基础标签
 
+内置色彩，分为`default` `fill` `outline`三种类型标签。可使用`round`修改标签形状。
+
+```tsx
+function Demo() {
+  const colors = [
+    'blue',
+    'red',
+    'gray',
+    'purple',
+    'yellow',
+    'green',
+    'orange',
+    'pink',
+  ];
+  return (
+    <div>
+      <style>{`
+        .demo {
+          display: flex;
+          gap: 16px;
+        }
+      `}</style>
+      <div className="demo">
+        Default Tag：
+        {colors.map((c) => (
+          <Tag key={c} color={c}>
+            {c}
+          </Tag>
+        ))}
+      </div>
+      <br />
+      <div className="demo">
+        Fill Tag：
+        {colors.map((c) => (
+          <Tag key={c} type="fill" color={c}>
+            {c}
+          </Tag>
+        ))}
+      </div>
+      <br />
+      <div className="demo">
+        Outline Tag：
+        {colors.map((c) => (
+          <Tag key={c} type="outline" color={c}>
+            {c}
+          </Tag>
+        ))}
+      </div>
+      <br />
+      <div className="demo">
+        Round Tag：
+        {colors.map((c) => (
+          <Tag key={c} round type="outline" color={c}>
+            {c}
+          </Tag>
+        ))}
+      </div>
+    </div>
+  );
+}
+```
+
+### 不同大小的标签
+
 ```tsx
 function Demo() {
   const colors = ['blue', 'red', 'gray'];
@@ -16,13 +80,32 @@ function Demo() {
         }
       `}</style>
       <div className="demo">
-        {colors.map((c) => <Tag key={c} selectable color={c}>{c}</Tag>)}
+        Small Tag：
+        {colors.map((c) => (
+          <Tag key={c} color={c} size="sm">
+            {c}
+          </Tag>
+        ))}
       </div>
       <br />
       <div className="demo">
-        {colors.map((c) => <Tag key={c} type="dark" color={c}>{c}</Tag>)}
+        Medium Tag：
+        {colors.map((c) => (
+          <Tag key={c} color={c} size="md">
+            {c}
+          </Tag>
+        ))}
+      </div>
+      <br />
+      <div className="demo">
+        Large Tag：
+        {colors.map((c) => (
+          <Tag key={c} color={c} size="lg">
+            {c}
+          </Tag>
+        ))}
       </div>
     </div>
   );
-};
+}
 ```

@@ -8,13 +8,10 @@ import Text from '../Text';
 import './index.scss';
 
 export interface TagProps {
-  size?: 'xs' | 'sm' | 'md' | 'lg';
-  type?: 'light' | 'dark';
+  size?: 'sm' | 'md' | 'lg';
+  type?: 'default' | 'fill' | 'outline';
   round?: boolean;
-  outline?: boolean;
-  color?: 'blue' | 'red' | 'gray' | 'purple';
-  selected?: boolean;
-  disabled?: boolean;
+  color?: 'blue' | 'red' | 'gray' | 'purple' | 'yellow' | 'green' | 'orange' | 'pink';
   className?: string;
   style?: React.CSSProperties;
 }
@@ -22,12 +19,9 @@ export interface TagProps {
 function Tag(props: React.PropsWithChildren<TagProps>) {
   const {
     size = 'md',
-    type = 'light',
+    type = 'default',
     round,
-    outline,
     color = 'blue',
-    disabled,
-    selected,
     className,
     style,
     children,
@@ -38,11 +32,9 @@ function Tag(props: React.PropsWithChildren<TagProps>) {
     <div
       className={classNames(mainClassName, className, {
         [`${mainClassName}--round`]: round,
-        [`${mainClassName}--outline`]: outline,
         [`${mainClassName}--${size}`]: !!size,
         [`${mainClassName}--${type}`]: !!type,
         [`${mainClassName}--${color}`]: !!color,
-        [`${mainClassName}--${disabled}`]: disabled,
       })}
       style={style}
     >
