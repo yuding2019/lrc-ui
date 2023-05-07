@@ -1,0 +1,351 @@
+@import '~lrc-ui/styles/variable';
+
+.primary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing16;
+
+  div {
+    width: 200px;
+    height: 60px;
+    border-radius: $brMD;
+    padding: $spacing08;
+    color: $gray0;
+    position: relative;
+    user-select: none;
+  }
+
+  .blue {
+    background-color: $bluePrimary;
+  }
+
+  .green {
+    background-color: $greenPrimary;
+  }
+
+  .yellow {
+    background-color: $yellowPrimary;
+  }
+
+  .gray {
+    background-color: $grayPrimary;
+  }
+
+  .purple {
+    background-color: $purplePrimary;
+  }
+
+  .pink {
+    background-color: $pinkPrimary;
+  }
+
+  .orange {
+    background-color: $orangePrimary;
+  }
+
+  .red {
+    background-color: $redPrimary;
+  }
+}
+
+.colorLevels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing16;
+}
+
+.levelWrap {
+  width: 200px;
+
+  div {
+    padding: $spacing08;
+    color: $gray9;
+  }
+
+  .deepColor {
+    color: $gray0;
+  }
+
+  // ====== blue ======
+  .blue0 {
+    background-color: $blue0;
+  }
+  .blue1 {
+    background-color: $blue1;
+  }
+  .blue2 {
+    background-color: $blue2;
+  }
+  .blue3 {
+    background-color: $blue3;
+  }
+  .blue4 {
+    background-color: $blue4;
+  }
+  .blue5 {
+    background-color: $blue5;
+  }
+  .blue5 {
+    background-color: $blue5;
+  }
+  .blue6 {
+    background-color: $blue6;
+  }
+  .blue7 {
+    background-color: $blue7;
+  }
+  .blue8 {
+    background-color: $blue8;
+  }
+  .blue9 {
+    background-color: $blue9;
+  }
+
+  // ====== green ======
+  .green0 {
+    background-color: $green0;
+  }
+  .green1 {
+    background-color: $green1;
+  }
+  .green2 {
+    background-color: $green2;
+  }
+  .green3 {
+    background-color: $green3;
+  }
+  .green4 {
+    background-color: $green4;
+  }
+  .green5 {
+    background-color: $green5;
+  }
+  .green5 {
+    background-color: $green5;
+  }
+  .green6 {
+    background-color: $green6;
+  }
+  .green7 {
+    background-color: $green7;
+  }
+  .green8 {
+    background-color: $green8;
+  }
+  .green9 {
+    background-color: $green9;
+  }
+
+  // ====== red ======
+  .red0 {
+    background-color: $red0;
+  }
+  .red1 {
+    background-color: $red1;
+  }
+  .red2 {
+    background-color: $red2;
+  }
+  .red3 {
+    background-color: $red3;
+  }
+  .red4 {
+    background-color: $red4;
+  }
+  .red5 {
+    background-color: $red5;
+  }
+  .red5 {
+    background-color: $red5;
+  }
+  .red6 {
+    background-color: $red6;
+  }
+  .red7 {
+    background-color: $red7;
+  }
+  .red8 {
+    background-color: $red8;
+  }
+  .red9 {
+    background-color: $red9;
+  }
+
+  // ====== yellow ======
+  .yellow0 {
+    background-color: $yellow0;
+  }
+  .yellow1 {
+    background-color: $yellow1;
+  }
+  .yellow2 {
+    background-color: $yellow2;
+  }
+  .yellow3 {
+    background-color: $yellow3;
+  }
+  .yellow4 {
+    background-color: $yellow4;
+  }
+  .yellow5 {
+    background-color: $yellow5;
+  }
+  .yellow5 {
+    background-color: $yellow5;
+  }
+  .yellow6 {
+    background-color: $yellow6;
+  }
+  .yellow7 {
+    background-color: $yellow7;
+  }
+  .yellow8 {
+    background-color: $yellow8;
+  }
+  .yellow9 {
+    background-color: $yellow9;
+  }
+
+  // ====== purple ======
+  .purple0 {
+    background-color: $purple0;
+  }
+  .purple1 {
+    background-color: $purple1;
+  }
+  .purple2 {
+    background-color: $purple2;
+  }
+  .purple3 {
+    background-color: $purple3;
+  }
+  .purple4 {
+    background-color: $purple4;
+  }
+  .purple5 {
+    background-color: $purple5;
+  }
+  .purple5 {
+    background-color: $purple5;
+  }
+  .purple6 {
+    background-color: $purple6;
+  }
+  .purple7 {
+    background-color: $purple7;
+  }
+  .purple8 {
+    background-color: $purple8;
+  }
+  .purple9 {
+    background-color: $purple9;
+  }
+
+  // ====== pink ======
+  .pink0 {
+    background-color: $pink0;
+  }
+  .pink1 {
+    background-color: $pink1;
+  }
+  .pink2 {
+    background-color: $pink2;
+  }
+  .pink3 {
+    background-color: $pink3;
+  }
+  .pink4 {
+    background-color: $pink4;
+  }
+  .pink5 {
+    background-color: $pink5;
+  }
+  .pink5 {
+    background-color: $pink5;
+  }
+  .pink6 {
+    background-color: $pink6;
+  }
+  .pink7 {
+    background-color: $pink7;
+  }
+  .pink8 {
+    background-color: $pink8;
+  }
+  .pink9 {
+    background-color: $pink9;
+  }
+
+  // ====== orange ======
+  .orange0 {
+    background-color: $orange0;
+  }
+  .orange1 {
+    background-color: $orange1;
+  }
+  .orange2 {
+    background-color: $orange2;
+  }
+  .orange3 {
+    background-color: $orange3;
+  }
+  .orange4 {
+    background-color: $orange4;
+  }
+  .orange5 {
+    background-color: $orange5;
+  }
+  .orange5 {
+    background-color: $orange5;
+  }
+  .orange6 {
+    background-color: $orange6;
+  }
+  .orange7 {
+    background-color: $orange7;
+  }
+  .orange8 {
+    background-color: $orange8;
+  }
+  .orange9 {
+    background-color: $orange9;
+  }
+
+  // ====== gray ======
+  .gray0 {
+    background-color: $gray0;
+  }
+  .gray1 {
+    background-color: $gray1;
+  }
+  .gray2 {
+    background-color: $gray2;
+  }
+  .gray3 {
+    background-color: $gray3;
+  }
+  .gray4 {
+    background-color: $gray4;
+  }
+  .gray5 {
+    background-color: $gray5;
+  }
+  .gray5 {
+    background-color: $gray5;
+  }
+  .gray6 {
+    background-color: $gray6;
+  }
+  .gray7 {
+    background-color: $gray7;
+  }
+  .gray8 {
+    background-color: $gray8;
+  }
+  .gray9 {
+    background-color: $gray9;
+  }
+  .gray10 {
+    background-color: $gray10;
+  }
+}

@@ -4,6 +4,10 @@ export const LRC_UI_ROUTES = [
     name: 'Home',
   },
   {
+    path: '/color',
+    name: 'Color',
+  },
+  {
     name: '内容组件',
     children: [
       { path: '/text', name: 'Text' },

@@ -1,0 +1,56 @@
+import classNames from 'classnames';
+
+import { Heading, Text } from 'lrc-ui';
+
+import styles from './index.module.scss';
+
+export const primaryColors = [
+  'Blue',
+  'Green',
+  'Yellow',
+  'Red',
+  'Purple',
+  'Pink',
+  'Orange',
+  'Gray',
+];
+
+export const COLOR_LEVEL = 10;
+
+# 色彩
+
+### 主色
+
+<div className={styles.primary}>
+  {primaryColors.map((c) => {
+    return (
+      <div className={styles[c.toLowerCase()]} key={c}>
+        <Heading level={6}>{c}</Heading>
+      </div>
+    );
+  })}
+</div>
+
+### 色盘
+
+<div className={styles.colorLevels}>
+  {primaryColors.map((c) => {
+    return (
+      <div key={c} className={styles.levelWrap}>
+        {Array.from({ length: COLOR_LEVEL + (c === 'Gray') }).map((_, index) => {
+          return (
+            <div
+              className={classNames(styles[c.toLowerCase() + index], {
+                [styles.deepColor]: index >= 4,
+              })}
+            >
+              <Text>
+                {c}-{index}
+              </Text>
+            </div>
+          );
+        })}
+      </div>
+    );
+  })}
+</div>
