@@ -8,6 +8,7 @@ $btn: #{$classNamePrefix}-btn;
   background-color: $red5;
 
   &:not(.#{$btn}--disabled):hover {
+    color: $gray0;
     border-color: $red4;
     background-color: $red4;
   }
@@ -86,12 +87,13 @@ $btn: #{$classNamePrefix}-btn;
 }
 
 .#{$btn}--default {
-  color: $gray9;
-  border-color: $gray3;
+  color: $gray7;
+  border-color: $gray2;
   background-color: $gray0;
-
+  
   &:not(.#{$btn}--disabled):hover {
-    border-color: $gray5;
+    color: $gray9;
+    border-color: $gray7;
     background-color: $gray1;
   }
 
@@ -101,10 +103,11 @@ $btn: #{$classNamePrefix}-btn;
 }
 
 .#{$btn}--text {
-  color: $gray9;
+  color: $gray7;
   background-color: $gray0;
-
+  
   &:not(.#{$btn}--disabled):hover {
+    color: $gray9;
     border-color: $gray1;
     background-color: $gray1;
   }
@@ -113,7 +116,7 @@ $btn: #{$classNamePrefix}-btn;
     color: $red5;
 
     &:not(.#{$btn}--disabled):hover {
-      color: $red4;
+      color: $red5;
       border-color: $gray1;
       background-color: $gray1;
     }
@@ -126,7 +129,6 @@ $btn: #{$classNamePrefix}-btn;
   background-color: $gray0;
 
   &:not(.#{$btn}--disabled):hover {
-    color: $blue4;
     background-color: $gray1;
   }
 
@@ -134,7 +136,7 @@ $btn: #{$classNamePrefix}-btn;
     color: $red5;
 
     &:not(.#{$btn}--disabled):hover {
-      color: $red4;
+      color: $red5;
       border-color: $gray1;
       background-color: $gray1;
     }
