@@ -87,14 +87,13 @@ $btn: #{$classNamePrefix}-btn;
 }
 
 .#{$btn}--default {
-  color: $gray7;
+  color: $gray8;
   border-color: $gray2;
   background-color: $gray0;
   
   &:not(.#{$btn}--disabled):hover {
     color: $gray9;
-    border-color: $gray7;
-    background-color: $gray1;
+    border-color: $gray5;
   }
 
   &-danger {
@@ -103,7 +102,7 @@ $btn: #{$classNamePrefix}-btn;
 }
 
 .#{$btn}--text {
-  color: $gray7;
+  color: $gray8;
   background-color: $gray0;
   
   &:not(.#{$btn}--disabled):hover {

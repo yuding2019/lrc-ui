@@ -11,7 +11,7 @@
   ],
   "scripts": {
     "lint": "eslint *.ts*",
-    "clean": "rimraf ./es",
+    "clean": "rm -f es/*",
     "prettier": "prettier --write components constant styles utils index.ts",
     "build:ui": "npm run clean && rollup -c rollup.config.js && npm run build:type",
     "build:type": "tsc"

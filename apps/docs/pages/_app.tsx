@@ -5,12 +5,13 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import Link from 'next/link';
 
-import { Heading, Text } from 'lrc-ui';
+import { Heading, Text, Tag } from 'lrc-ui';
 
 import ComponentPreview from '../components/ComponentPreview';
 import SideMenu from '../components/SideMenu';
 
 import favicon from '../public/favicon.png';
+
 import '../styles/editor-theme.css';
 import '../styles/reset.css';
 import styles from './_app.module.scss';
@@ -26,9 +27,9 @@ const map = {
   h6: (props: any) => <Heading level={6} weight="light" {...props} />,
   a: (props: any) => <Link {...props} />,
   code: (props: any) => (
-    <span className={styles.tag}>
-      <Text size="lg" weight="bold" {...props} />
-    </span>
+    <Tag className={styles.tag}>
+      {props.children}
+    </Tag>
   ),
 };
 

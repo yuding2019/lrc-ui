@@ -31,6 +31,9 @@ importers:
       '@next/mdx':
         specifier: ^13.3.0
         version: 13.3.0(@mdx-js/loader@2.3.0)(@mdx-js/react@2.3.0)
+      bootstrap-icons:
+        specifier: ^1.10.5
+        version: 1.10.5
       classnames:
         specifier: ^2.3.2
         version: 2.3.2
@@ -1438,6 +1441,10 @@ packages:
   /boolbase@1.0.0:
     resolution: {integrity: sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==}
     dev: true
+
+  /bootstrap-icons@1.10.5:
+    resolution: {integrity: sha512-oSX26F37V7QV7NCE53PPEL45d7EGXmBgHG3pDpZvcRaKVzWMqIRL9wcqJUyEha1esFtM3NJzvmxFXDxjJYD0jQ==}
+    dev: false
 
   /brace-expansion@1.1.11:
     resolution: {integrity: sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==}

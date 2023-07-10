@@ -8,6 +8,10 @@ export const LRC_UI_ROUTES = [
     name: 'Color',
   },
   {
+    path: '/icon',
+    name: 'Icon',
+  },
+  {
     name: '内容组件',
     children: [
       { path: '/text', name: 'Text' },
